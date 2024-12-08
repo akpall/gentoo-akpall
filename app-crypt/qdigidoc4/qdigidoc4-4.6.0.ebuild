@@ -17,6 +17,7 @@ RDEPEND="
 	dev-libs/flatbuffers
 	dev-libs/libdigidocpp
 	net-nds/openldap
+	sys-apps/pcsc-lite
 "
 
 src_prepare() {
