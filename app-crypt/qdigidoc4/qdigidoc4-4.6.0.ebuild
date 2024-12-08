@@ -16,6 +16,7 @@ KEYWORDS="~amd64"
 RDEPEND="
 	dev-libs/flatbuffers
 	dev-libs/libdigidocpp
+	net-nds/openldap
 "
 
 src_prepare() {
