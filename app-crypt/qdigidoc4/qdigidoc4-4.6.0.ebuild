@@ -13,7 +13,10 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RDEPEND="dev-libs/flatbuffers"
+RDEPEND="
+	dev-libs/flatbuffers
+	dev-libs/libdigidocpp
+"
 
 src_prepare() {
 	cmake_src_prepare
