@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>akpall@fst.ee</email>
+    <name>Allen-Kristjan Päll</name>
+  </maintainer>
+  <upstream>
+    <remote-id type="github">open-eid/libdigidocpp</remote-id>
+  </upstream>
+</pkgmetadata>
