@@ -16,8 +16,8 @@ KEYWORDS="~amd64"
 RDEPEND="
 	dev-libs/flatbuffers
 	dev-libs/libdigidocpp
+	dev-libs/opensc[pcsc-lite]
 	net-nds/openldap
-	sys-apps/pcsc-lite
 "
 
 src_prepare() {
