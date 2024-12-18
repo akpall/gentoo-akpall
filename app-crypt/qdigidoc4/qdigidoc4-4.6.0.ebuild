@@ -44,9 +44,3 @@ src_prepare() {
 	# https://id.eesti.ee/config.{json,rsa,pub}
 	cp "${FILESDIR}"/config.{json,rsa,pub} "${S}"/common/
 }
-
-src_configure() {
-	QT_DEFAULT_MAJOR_VERSION=6
-
-	cmake_src_configure
-}
