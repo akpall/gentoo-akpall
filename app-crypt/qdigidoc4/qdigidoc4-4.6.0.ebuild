@@ -46,10 +46,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local mycmakeargs=(
-		$(cmake_use_find_package qt5 Qt5)
-		$(cmake_use_find_package qt6 Qt6)
-	)
+	QT_DEFAULT_MAJOR_VERSION=6
 
 	cmake_src_configure
 }
