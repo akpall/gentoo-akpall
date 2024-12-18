@@ -12,14 +12,25 @@ SRC_URI="https://github.com/open-eid/DigiDoc4-Client/releases/download/v${PV}/${
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE="qt5 +qt6"
 
 RDEPEND="
 	dev-libs/flatbuffers
 	dev-libs/libdigidocpp
 	dev-libs/xmlsec
-	dev-qt/qtbase
-	dev-qt/qtsvg
 	net-nds/openldap
+	qt5? (
+		 dev-qt/qtcore
+		 dev-qt/qtwidgets
+		 dev-qt/qtnetwork
+		 dev-qt/qtprintsupport
+		 dev-qt/qtsvg:5
+		 dev-qt/linguist-tools
+	)
+	qt6? (
+		 dev-qt/qtbase
+		 dev-qt/qtsvg:6
+	)
 	sys-apps/pcsc-lite
 "
 
