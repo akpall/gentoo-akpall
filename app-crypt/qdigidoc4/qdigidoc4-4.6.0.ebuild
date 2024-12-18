@@ -44,3 +44,12 @@ src_prepare() {
 	# https://id.eesti.ee/config.{json,rsa,pub}
 	cp "${FILESDIR}"/config.{json,rsa,pub} "${S}"/common/
 }
+
+src_configure() {
+	local mycmakeargs=(
+		$(cmake_use_find_package qt5 Qt5)
+		$(cmake_use_find_package qt6 Qt6)
+	)
+
+	cmake_src_configure
+}
