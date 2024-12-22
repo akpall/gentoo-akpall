@@ -13,4 +13,6 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RDEPEND="dev-libs/xmlsec"
+RDEPEND="dev-libs/xmlsec:="
+DEPEND="${RDEPEND}"
+BDEPEND=""
