@@ -19,6 +19,7 @@ RDEPEND="
 	>=dev-libs/libdigidocpp-4.0.0
 	dev-libs/xmlsec:=
 	net-nds/openldap:=
+	sys-apps/pcsc-lite
 	qt5? (
 		 dev-qt/qtcore:5=
 		 dev-qt/qtwidgets:5=
@@ -31,7 +32,6 @@ RDEPEND="
 		 dev-qt/qtbase:6=
 		 dev-qt/qtsvg:6=
 	)
-	sys-apps/pcsc-lite
 "
 DEPEND="${RDEPEND}"
 #BDEPEND=""
