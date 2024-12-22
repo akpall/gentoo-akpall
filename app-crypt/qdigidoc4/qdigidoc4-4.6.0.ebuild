@@ -34,7 +34,7 @@ RDEPEND="
 	sys-apps/pcsc-lite
 "
 DEPEND="${RDEPEND}"
-BDEPEND=""
+#BDEPEND=""
 
 src_prepare() {
 	cmake_src_prepare
