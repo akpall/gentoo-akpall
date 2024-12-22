@@ -15,21 +15,21 @@ KEYWORDS="~amd64"
 IUSE="qt5 +qt6"
 
 RDEPEND="
-	dev-libs/flatbuffers
-	dev-libs/libdigidocpp
-	dev-libs/xmlsec
-	net-nds/openldap
+	dev-libs/flatbuffers:=
+	>=dev-libs/libdigidocpp-4.0.0
+	dev-libs/xmlsec:=
+	net-nds/openldap:=
 	qt5? (
-		 dev-qt/qtcore
-		 dev-qt/qtwidgets
-		 dev-qt/qtnetwork
-		 dev-qt/qtprintsupport
-		 dev-qt/qtsvg:5
-		 dev-qt/linguist-tools
+		 dev-qt/qtcore:5=
+		 dev-qt/qtwidgets:5=
+		 dev-qt/qtnetwork:5=
+		 dev-qt/qtprintsupport:5=
+		 dev-qt/qtsvg:5=
+		 dev-qt/linguist-tools:5=
 	)
 	qt6? (
-		 dev-qt/qtbase
-		 dev-qt/qtsvg:6
+		 dev-qt/qtbase:6=
+		 dev-qt/qtsvg:6=
 	)
 	sys-apps/pcsc-lite
 "
