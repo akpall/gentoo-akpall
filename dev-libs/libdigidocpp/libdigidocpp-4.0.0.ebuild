@@ -15,4 +15,4 @@ KEYWORDS="~amd64"
 
 RDEPEND="dev-libs/xmlsec:="
 DEPEND="${RDEPEND}"
-BDEPEND=""
+#BDEPEND=""
