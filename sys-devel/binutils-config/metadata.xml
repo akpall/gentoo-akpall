@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>akpall@fst.ee</email>
+    <name>Allen-Kristjan Päll</name>
+  </maintainer>
+  <use>
+    <flag name="native-symlinks">Install native symlinks like 'as' or 'ar' to /usr/bin. Otherwise keep only ${CTARGET}-as and friends.</flag>
+  </use>
+</pkgmetadata>
