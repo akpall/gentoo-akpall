@@ -7,7 +7,7 @@ inherit cmake
 
 DESCRIPTION="Application for digitally signing and encrypting documents"
 HOMEPAGE="https://github.com/open-eid/DigiDoc4-Client"
-SRC_URI="https://github.com/open-eid/DigiDoc4-Client/releases/download/v${PV}/${P}.tar.gz"
+SRC_URI="https://github.com/open-eid/DigiDoc4-Client/releases/download/v${PV}/${P}.tar.gz -> ${P}.tar"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
