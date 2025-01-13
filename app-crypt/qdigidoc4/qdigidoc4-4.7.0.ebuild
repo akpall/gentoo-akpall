@@ -15,13 +15,13 @@ KEYWORDS="~amd64"
 #IUSE=""
 
 RDEPEND="
-	dev-libs/flatbuffers:=
 	>=dev-libs/libdigidocpp-4.1.0
+	dev-libs/flatbuffers:=
+	dev-libs/opensc[pcsc-lite]
 	dev-libs/xmlsec:=
-	net-nds/openldap:=
-	sys-apps/pcsc-lite
 	dev-qt/qtbase:6=
 	dev-qt/qtsvg:6=
+	net-nds/openldap:=
 "
 DEPEND="${RDEPEND}"
 #BDEPEND=""
