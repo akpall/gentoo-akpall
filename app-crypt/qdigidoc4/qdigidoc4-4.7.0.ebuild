@@ -16,7 +16,7 @@ KEYWORDS="~amd64"
 
 RDEPEND="
 	dev-libs/flatbuffers:=
-	>=dev-libs/libdigidocpp-4.0.0
+	>=dev-libs/libdigidocpp-4.1.0
 	dev-libs/xmlsec:=
 	net-nds/openldap:=
 	sys-apps/pcsc-lite
