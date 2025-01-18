@@ -26,6 +26,10 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 #BDEPEND=""
 
+PATCHES=(
+	"${FILESDIR}/${P}-remove-Qt5.patch"
+)
+
 src_prepare() {
 	cmake_src_prepare
 

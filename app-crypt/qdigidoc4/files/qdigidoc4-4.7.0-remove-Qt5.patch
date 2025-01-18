@@ -1,0 +1,25 @@
+From e0a73a1737203ddebbd8270ab2f60bedb940e873 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Allen-Kristjan=20P=C3=A4ll?= <akpall@fst.ee>
+Date: Sat, 18 Jan 2025 16:48:47 +0200
+Subject: [PATCH] remove Qt5
+
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index cb0d25b..525e6a4 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -13,7 +13,7 @@ include( VersionInfo )
+ 
+ find_package(LibDigiDocpp 4.1.0 REQUIRED)
+ find_package( LDAP REQUIRED )
+-find_package(QT NAMES Qt6 Qt5 COMPONENTS Core REQUIRED)
++find_package(QT NAMES Qt6 COMPONENTS Core REQUIRED)
+ find_package(Qt${QT_VERSION_MAJOR} 5.12.0 REQUIRED COMPONENTS Core Widgets Network PrintSupport Svg LinguistTools)
+ find_package(FlatBuffers CONFIG REQUIRED NAMES FlatBuffers Flatbuffers)
+ find_package(ZLIB REQUIRED)
+-- 
+2.48.0
+
