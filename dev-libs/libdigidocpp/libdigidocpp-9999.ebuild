@@ -12,7 +12,8 @@ if [[ ${PV} == "9999" ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/open-eid/libdigidocpp.git"
 else
-	SRC_URI="https://github.com/open-eid/libdigidocpp/releases/download/v${PV}/${P}.tar.gz"
+	# in version 4.1.0 .tar.gz is by mistake just .tar
+	SRC_URI="https://github.com/open-eid/libdigidocpp/releases/download/v${PV}/${P}.tar.gz -> ${P}.tar"
 	KEYWORDS="~amd64"
 fi
 
