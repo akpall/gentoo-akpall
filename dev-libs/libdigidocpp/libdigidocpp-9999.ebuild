@@ -37,3 +37,11 @@ DEPEND="
 	doc? ( app-text/doxygen )
 "
 #BDEPEND=""
+
+src_configure() {
+	local mycmakeargs=(
+		-DCMAKE_INSTALL_DOCDIR="share/doc/${PF}/html"
+		$(cmake_use_find_package doc Doxygen)
+	)
+	cmake_src_configure
+}
