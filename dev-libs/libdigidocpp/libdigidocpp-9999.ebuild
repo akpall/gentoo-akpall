@@ -20,6 +20,14 @@ fi
 LICENSE="LGPL-2.1"
 SLOT="0"
 
-RDEPEND="dev-libs/xmlsec:="
+RDEPEND="
+	dev-libs/icu:0=
+	dev-libs/libltdl
+	dev-libs/libxml2:2
+	dev-libs/libxslt
+	dev-libs/openssl:0=
+	dev-libs/xmlsec:0=
+	sys-libs/zlib
+"
 DEPEND="${RDEPEND}"
 #BDEPEND=""
