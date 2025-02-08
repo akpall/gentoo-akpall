@@ -7,6 +7,7 @@ inherit cmake
 
 DESCRIPTION="Library for creating, signing and verification of digitally signed documents"
 HOMEPAGE="https://github.com/open-eid/libdigidocpp"
+# in version 4.1.0 .tar.gz by mistake is just .tar
 SRC_URI="https://github.com/open-eid/libdigidocpp/releases/download/v${PV}/${P}.tar.gz -> ${P}.tar"
 
 LICENSE="LGPL-2.1"
