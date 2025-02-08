@@ -21,8 +21,9 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE="doc"
 
+DOCS="AUTHORS COPYING LICENSE.LGPL README.md RELEASE-NOTES.md"
+
 RDEPEND="
-	doc? ( app-text/doxygen )
 	dev-libs/icu:0=
 	dev-libs/libltdl
 	dev-libs/libxml2
@@ -31,5 +32,8 @@ RDEPEND="
 	dev-libs/xmlsec:0=
 	sys-libs/zlib:0=
 "
-DEPEND="${RDEPEND}"
+DEPEND="
+	${RDEPEND}
+	doc? ( app-text/doxygen )
+"
 #BDEPEND=""
