@@ -19,15 +19,17 @@ fi
 
 LICENSE="LGPL-2.1"
 SLOT="0"
+IUSE="doc"
 
 RDEPEND="
+	doc? ( app-text/doxygen )
 	dev-libs/icu:0=
 	dev-libs/libltdl
-	dev-libs/libxml2:2
+	dev-libs/libxml2
 	dev-libs/libxslt
 	dev-libs/openssl:0=
 	dev-libs/xmlsec:0=
-	sys-libs/zlib
+	sys-libs/zlib:0=
 "
 DEPEND="${RDEPEND}"
 #BDEPEND=""
