@@ -24,8 +24,6 @@ IUSE="doc"
 DOCS="AUTHORS COPYING LICENSE.LGPL README.md RELEASE-NOTES.md"
 
 RDEPEND="
-	dev-libs/icu:0=
-	dev-libs/libltdl
 	dev-libs/libxml2
 	dev-libs/libxslt
 	dev-libs/openssl:0=
