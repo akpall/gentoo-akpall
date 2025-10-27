@@ -1,0 +1,53 @@
+# Copyright 1999-2025 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI="8"
+
+# | Architecture | Raspberry Pi Model | Command                |
+# |--------------+--------------------+------------------------|
+# | 64-bit       | 3                  | KERNEL=kernel8         |
+# |              | Compute Module 3   | make bcm2711_defconfig |
+# |              | 3+                 |                        |
+# |              | Compute Module 3+  |                        |
+# |              | Zero 2 W           |                        |
+# |              | 4                  |                        |
+# |              | 400                |                        |
+# |              | Compute Module 4   |                        |
+# |              | Compute Module 4S  |                        |
+# |--------------+--------------------+------------------------|
+# | 64-bit       | 5                  | KERNEL=kernel_2712     |
+# |              | 500/500+           | make bcm2712_defconfig |
+# |              | Compute Module 5   |                        |
+# |--------------+--------------------+------------------------|
+# | 32-bit       | 1                  | KERNEL=kernel          |
+# |              | Compute Module 1   | make bcmrpi_defconfig  |
+# |              | Zero               |                        |
+# |              | Zero W             |                        |
+# |--------------+--------------------+------------------------|
+# | 32-bit       | 2                  | KERNEL=kernel7         |
+# |              | 3                  | make bcm2709_defconfig |
+# |              | Compute Module 3   |                        |
+# |              | 3+                 |                        |
+# |              | Compute Module 3+  |                        |
+# |              | Zero 2 W           |                        |
+# |--------------+--------------------+------------------------|
+# | 32-bit       | 4                  | KERNEL=kernel7l        |
+# |              | 400                | make bcm2711_defconfig |
+# |              | Compute Module 4   |                        |
+# |              | Compute Module 4S  |                        |
+KERNEL="kernel8"
+K_DEFCONFIG="bcm2711_defconfig"
+
+ETYPE="sources"
+K_NOSETEXTRAVERSION="yes"
+K_NOUSENAME="yes"
+K_SECURITY_UNSUPPORTED="1"
+K_WANT_GENPATCHES=""
+
+inherit kernel-2
+detect_version
+
+DESCRIPTION="Raspberry Pi kernel sources"
+HOMEPAGE="https://github.com/raspberrypi/linux"
+SRC_URI="https://github.com/raspberrypi/linux/archive/refs/tags/stable_20250916.tar.gz"
+KEYWORDS="arm arm64"
