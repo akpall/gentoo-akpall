@@ -66,9 +66,3 @@ universal_unpack() {
 	# remove all backup files
 	find . -iname "*~" -exec rm {} \; 2>/dev/null
 }
-
-pkg_preinst() {
-	[[ ${ETYPE} == headers ]] && preinst_headers
-
-	mv "${ED}/linux-${PVR}" "${ED}/${PF}" || die
-}
