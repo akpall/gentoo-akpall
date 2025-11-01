@@ -52,6 +52,7 @@ DESCRIPTION="Raspberry Pi kernel sources"
 HOMEPAGE="https://github.com/raspberrypi/linux"
 SRC_URI="https://github.com/raspberrypi/linux/archive/refs/tags/${RASPBERRYPI_KERNEL_TAG}.tar.gz"
 KEYWORDS="arm arm64"
+S="${WORKDIR}/linux-${PVR}"
 
 universal_unpack() {
 	debug-print-kernel2-variables
