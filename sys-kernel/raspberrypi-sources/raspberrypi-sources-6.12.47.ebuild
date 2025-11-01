@@ -58,7 +58,7 @@ universal_unpack() {
 
 	# We want to rename the unpacked directory to a nice normalised string
 	# bug #762766
-	mv "${WORKDIR}/${RASPBERRYPI_KERNEL_TAG}" "${WORKDIR}/linux-${KV_FULL}" || die
+	mv "${WORKDIR}/linux-${RASPBERRYPI_KERNEL_TAG}" "${WORKDIR}/linux-${KV_FULL}" || die
 
 	# remove all backup files
 	find . -iname "*~" -exec rm {} \; 2>/dev/null
