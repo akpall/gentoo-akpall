@@ -46,7 +46,6 @@ K_NOUSENAME="yes"
 K_SECURITY_UNSUPPORTED="1"
 
 inherit kernel-2
-detect_version
 
 DESCRIPTION="Raspberry Pi kernel sources"
 HOMEPAGE="https://github.com/raspberrypi/linux"
