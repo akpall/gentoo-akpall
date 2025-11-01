@@ -65,3 +65,30 @@ universal_unpack() {
 	# remove all backup files
 	find . -iname "*~" -exec rm {} \; 2>/dev/null
 }
+
+install_sources() {
+	local file
+
+	cd "${S}" || die
+	dodir /usr/src
+	einfo ">>> Copying sources ..."
+
+	file="$(find "${WORKDIR}" -iname "docs" -type d)"
+	if [[ -n ${file} ]]; then
+		for file in $(find ${file} -type f); do
+			echo "${file//*docs\/}" >> "${S}"/patches.txt
+			echo "===================================================" >> "${S}"/patches.txt
+			cat ${file} >> "${S}"/patches.txt
+			echo "===================================================" >> "${S}"/patches.txt
+			echo "" >> "${S}"/patches.txt
+		done
+	fi
+
+	cp -R "${WORKDIR}/${PN}*" "${ED}/usr/src" || die
+
+	if [[ -n ${UNIPATCH_DOCS} ]]; then
+		for i in ${UNIPATCH_DOCS}; do
+			dodoc "${T}/${i}"
+		done
+	fi
+}
