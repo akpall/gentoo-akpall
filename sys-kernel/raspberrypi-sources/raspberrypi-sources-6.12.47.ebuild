@@ -70,5 +70,5 @@ universal_unpack() {
 pkg_preinst() {
 	[[ ${ETYPE} == headers ]] && preinst_headers
 
-	mv "${WORKDIR}/linux-${PVR}" "${WORKDIR}/${PF}" || die
+	mv "${ED}/linux-${PVR}" "${ED}/${PF}" || die
 }
