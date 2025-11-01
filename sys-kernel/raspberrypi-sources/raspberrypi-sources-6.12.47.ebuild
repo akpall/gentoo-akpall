@@ -54,6 +54,8 @@ SRC_URI="https://github.com/raspberrypi/linux/archive/refs/tags/${RASPBERRYPI_KE
 KEYWORDS="arm arm64"
 
 universal_unpack() {
+	debug-print-kernel2-variables
+
 	unpack ${RASPBERRYPI_KERNEL_TAG}.tar.gz
 
 	# We want to rename the unpacked directory to a nice normalised string
