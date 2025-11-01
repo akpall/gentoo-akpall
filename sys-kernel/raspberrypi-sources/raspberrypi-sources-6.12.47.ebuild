@@ -55,5 +55,5 @@ SRC_URI="https://github.com/raspberrypi/linux/archive/refs/tags/${RASPBERRYPI_KE
 KEYWORDS="arm arm64"
 
 universal_unpack() {
-	unpack ${RASPBERRYPI_KERNEL_TAG}.tar.xz
+	unpack ${RASPBERRYPI_KERNEL_TAG}.tar.gz
 }
