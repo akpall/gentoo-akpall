@@ -38,6 +38,8 @@ EAPI="8"
 KERNEL="kernel8"
 K_DEFCONFIG="bcm2711_defconfig"
 
+RASPBERRYPI_KERNEL_TAG="stable_20250916"
+
 ETYPE="sources"
 K_NOSETEXTRAVERSION="yes"
 K_NOUSENAME="yes"
@@ -49,5 +51,9 @@ detect_version
 
 DESCRIPTION="Raspberry Pi kernel sources"
 HOMEPAGE="https://github.com/raspberrypi/linux"
-SRC_URI="https://github.com/raspberrypi/linux/archive/refs/tags/stable_20250916.tar.gz"
+SRC_URI="https://github.com/raspberrypi/linux/archive/refs/tags/${RASPBERRYPI_KERNEL_TAG}.tar.gz"
 KEYWORDS="arm arm64"
+
+universal_unpack() {
+	unpack ${RASPBERRYPI_KERNEL_TAG}.tar.xz
+}
