@@ -56,4 +56,11 @@ KEYWORDS="arm arm64"
 
 universal_unpack() {
 	unpack ${RASPBERRYPI_KERNEL_TAG}.tar.gz
+
+	# We want to rename the unpacked directory to a nice normalised string
+	# bug #762766
+	mv "${WORKDIR}/${RASPBERRYPI_KERNEL_TAG}" "${WORKDIR}/linux-${KV_FULL}" || die
+
+	# remove all backup files
+	find . -iname "*~" -exec rm {} \; 2>/dev/null
 }
