@@ -60,35 +60,8 @@ universal_unpack() {
 
 	# We want to rename the unpacked directory to a nice normalised string
 	# bug #762766
-	mv "${WORKDIR}/linux-${RASPBERRYPI_KERNEL_TAG}" "${WORKDIR}/${PF}" || die
+	mv "${WORKDIR}/linux-${RASPBERRYPI_KERNEL_TAG}" "${WORKDIR}/linux-${PVR}" || die
 
 	# remove all backup files
 	find . -iname "*~" -exec rm {} \; 2>/dev/null
-}
-
-install_sources() {
-	local file
-
-	cd "${S}" || die
-	dodir /usr/src
-	einfo ">>> Copying sources ..."
-
-	file="$(find "${WORKDIR}" -iname "docs" -type d)"
-	if [[ -n ${file} ]]; then
-		for file in $(find ${file} -type f); do
-			echo "${file//*docs\/}" >> "${S}"/patches.txt
-			echo "===================================================" >> "${S}"/patches.txt
-			cat ${file} >> "${S}"/patches.txt
-			echo "===================================================" >> "${S}"/patches.txt
-			echo "" >> "${S}"/patches.txt
-		done
-	fi
-
-	cp -R "${WORKDIR}/${PN}*" "${ED}/usr/src" || die
-
-	if [[ -n ${UNIPATCH_DOCS} ]]; then
-		for i in ${UNIPATCH_DOCS}; do
-			dodoc "${T}/${i}"
-		done
-	fi
 }
