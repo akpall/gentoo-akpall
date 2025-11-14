@@ -44,11 +44,8 @@ ETYPE="sources"
 EXTRAVERSION="raspberrypi"
 K_GENPATCHES_VER="53"
 K_SECURITY_UNSUPPORTED="1"
-K_WANT_GENPATCHES="base extras"
 
 inherit kernel-2
-detect_version
-detect_arch
 
 DESCRIPTION="Raspberry Pi kernel sources"
 HOMEPAGE="https://github.com/raspberrypi/linux"
@@ -59,10 +56,7 @@ SRC_URI="
 KEYWORDS="arm arm64"
 S="${WORKDIR}/linux-${PVR}"
 
-UNIPATCH_EXCLUDE="
-	10*
-	15*
-"
+UNIPATCH_EXCLUDE="*"
 
 pkg_setup() {
 	ewarn ""
