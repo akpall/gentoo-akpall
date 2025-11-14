@@ -42,17 +42,38 @@ RASPBERRYPI_KERNEL_TAG="stable_20250916"
 
 ETYPE="sources"
 EXTRAVERSION="raspberrypi"
-K_PREDEBLOBBED="1"
-K_PREPATCHED="1"
+K_GENPATCHES_VER="53"
 K_SECURITY_UNSUPPORTED="1"
+K_WANT_GENPATCHES="base extras"
 
 inherit kernel-2
+detect_version
+detect_arch
 
 DESCRIPTION="Raspberry Pi kernel sources"
 HOMEPAGE="https://github.com/raspberrypi/linux"
-SRC_URI="https://github.com/raspberrypi/linux/archive/refs/tags/${RASPBERRYPI_KERNEL_TAG}.tar.gz"
+SRC_URI="
+	https://github.com/raspberrypi/linux/archive/refs/tags/${RASPBERRYPI_KERNEL_TAG}.tar.gz
+	${GENPATCHES_URI}
+"
 KEYWORDS="arm arm64"
 S="${WORKDIR}/linux-${PVR}"
+
+UNIPATCH_EXCLUDE="
+	10*
+	15*
+"
+
+pkg_setup() {
+	ewarn ""
+	ewarn "${PN} is *not* supported by the Gentoo Kernel Project in any way."
+	ewarn "If you need support, please contact the raspberrypi developers directly."
+	ewarn "Do *not* open bugs in Gentoo's bugzilla unless you have issues with"
+	ewarn "the ebuilds. Thank you."
+	ewarn ""
+
+	kernel-2_pkg_setup
+}
 
 universal_unpack() {
 	debug-print-kernel2-variables
