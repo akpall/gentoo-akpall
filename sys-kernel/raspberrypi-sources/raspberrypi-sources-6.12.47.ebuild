@@ -54,7 +54,7 @@ SRC_URI="
 	${GENPATCHES_URI}
 "
 KEYWORDS="arm arm64"
-S="${WORKDIR}/linux-${PVR}"
+S="${WORKDIR}/linux-raspberrypi-${PVR}"
 
 UNIPATCH_EXCLUDE="*"
 
@@ -76,7 +76,7 @@ universal_unpack() {
 
 	# We want to rename the unpacked directory to a nice normalised string
 	# bug #762766
-	mv "${WORKDIR}/linux-${RASPBERRYPI_KERNEL_TAG}" "${WORKDIR}/linux-${PVR}" || die
+	mv "${WORKDIR}/linux-${RASPBERRYPI_KERNEL_TAG}" "${WORKDIR}/linux-raspberrypi-${PVR}" || die
 
 	# remove all backup files
 	find . -iname "*~" -exec rm {} \; 2>/dev/null
