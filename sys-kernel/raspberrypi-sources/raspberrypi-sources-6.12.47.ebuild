@@ -42,6 +42,7 @@ RASPBERRYPI_KERNEL_TAG="stable_20250916"
 
 ETYPE="sources"
 EXTRAVERSION="raspberrypi"
+K_GENPATCHES_VER="1"
 K_SECURITY_UNSUPPORTED="1"
 
 inherit kernel-2
@@ -50,6 +51,7 @@ DESCRIPTION="Raspberry Pi kernel sources"
 HOMEPAGE="https://github.com/raspberrypi/linux"
 SRC_URI="
 	https://github.com/raspberrypi/linux/archive/refs/tags/${RASPBERRYPI_KERNEL_TAG}.tar.gz
+	${GENPATCHES_URI}
 "
 KEYWORDS="arm arm64"
 S="${WORKDIR}/linux-raspberrypi-${PVR}"
