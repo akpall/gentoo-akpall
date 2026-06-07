@@ -13,7 +13,7 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RDEPEND=""
+RDEPEND="dev-lisp/global-vars"
 DEPEND="${RDEPEND}"
 
 src_install() {
