@@ -16,5 +16,6 @@ KEYWORDS="~amd64"
 RDEPEND="
 	dev-lisp/misc-extensions
 	dev-lisp/mt19937
+	dev-lisp/named-readtables
 "
 DEPEND="${RDEPEND}"
