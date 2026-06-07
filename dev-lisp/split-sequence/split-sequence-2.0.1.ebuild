@@ -19,6 +19,6 @@ DEPEND="${RDEPEND}"
 
 src_install() {
 	common-lisp-3_src_install
-	insinto /usr/share/common-lisp/source/parse-number
+	insinto /usr/share/common-lisp/source/split-sequence
 	doins version.sexp
 }
