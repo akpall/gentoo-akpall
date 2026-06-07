@@ -15,3 +15,9 @@ KEYWORDS="~amd64"
 
 RDEPEND=""
 DEPEND="${RDEPEND}"
+
+src_install() {
+	common-lisp-3_src_install
+	insinto /usr/share/common-lisp/source/bordeaux-threads
+	doins version.sexp
+}
