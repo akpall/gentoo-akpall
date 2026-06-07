@@ -14,5 +14,5 @@ LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RDEPEND=""
+RDEPEND="dev-lisp/trivial-indent"
 DEPEND="${RDEPEND}"
