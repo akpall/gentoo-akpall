@@ -13,5 +13,8 @@ LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RDEPEND="dev-lisp/misc-extensions"
+RDEPEND="
+	dev-lisp/misc-extensions
+	dev-lisp/mt19937
+"
 DEPEND="${RDEPEND}"
