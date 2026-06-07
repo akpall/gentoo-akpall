@@ -19,6 +19,7 @@ RDEPEND="
 	dev-lisp/asdf
 	dev-lisp/cffi
 	dev-lisp/cl-colors2
+	dev-lisp/closer-mop
 	dev-lisp/terminfo
 	x11-libs/cairo
 	x11-libs/pango
