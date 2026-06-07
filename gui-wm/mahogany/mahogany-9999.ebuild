@@ -8,14 +8,11 @@ inherit git-r3
 DESCRIPTION="A stumpwm like Wayland compositor"
 HOMEPAGE="https://github.com/stumpwm/mahogany"
 
-#SRC_URI=""
 EGIT_REPO_URI="https://github.com/stumpwm/mahogany.git"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE=""
-RESTRICT=""
 
 RDEPEND="
 	dev-lisp/alexandria
@@ -24,4 +21,3 @@ RDEPEND="
 	x11-libs/pango
 "
 DEPEND="${RDEPEND}"
-BDEPEND=""
