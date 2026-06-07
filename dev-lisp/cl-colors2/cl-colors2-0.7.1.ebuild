@@ -14,5 +14,8 @@ LICENSE="Boost-1.0"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RDEPEND="dev-lisp/alexandria"
+RDEPEND="
+	dev-lisp/alexandria
+	dev-lisp/parse-number
+"
 DEPEND="${RDEPEND}"
