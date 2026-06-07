@@ -11,6 +11,7 @@ SRC_URI="https://github.com/pnathan/cl-ansi-text/archive/refs/tags/v${PV}.tar.gz
 
 LICENSE="LLGPL-2.1"
 SLOT="0"
+KEYWORDS="~amd64"
 
 RDEPEND="dev-lisp/alexandria"
 DEPEND="${RDEPEND}"
