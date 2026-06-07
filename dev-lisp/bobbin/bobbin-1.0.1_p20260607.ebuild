@@ -14,5 +14,8 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RDEPEND="virtual/commonlisp"
+RDEPEND="
+	dev-lisp/split-sequence
+	virtual/commonlisp
+"
 DEPEND="${RDEPEND}"
