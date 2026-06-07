@@ -21,6 +21,7 @@ RDEPEND="
 	dev-lisp/cffi
 	dev-lisp/cl-colors2
 	dev-lisp/closer-mop
+	dev-lisp/fset
 	dev-lisp/iterate
 	dev-lisp/terminfo
 	x11-libs/cairo
