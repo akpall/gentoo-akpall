@@ -3,7 +3,7 @@
 
 EAPI=9
 
-inherit git-r3
+inherit common-lisp-3 git-r3
 
 DESCRIPTION="A stumpwm like Wayland compositor"
 HOMEPAGE="https://github.com/stumpwm/mahogany"
