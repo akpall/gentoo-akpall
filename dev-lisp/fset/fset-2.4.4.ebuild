@@ -14,6 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 RDEPEND="
+	dev-lisp/bordeaux-threads
 	dev-lisp/misc-extensions
 	dev-lisp/mt19937
 	dev-lisp/named-readtables
