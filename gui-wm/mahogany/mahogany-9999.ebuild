@@ -18,6 +18,7 @@ RDEPEND="
 	dev-lisp/alexandria
 	dev-lisp/asdf
 	dev-lisp/cl-colors2
+	dev-lisp/terminfo
 	x11-libs/cairo
 	x11-libs/pango
 "
