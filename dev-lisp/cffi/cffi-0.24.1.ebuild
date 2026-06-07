@@ -21,3 +21,9 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 BDEPEND=""
+
+src_install() {
+	common-lisp-3_src_install
+	insinto /usr/share/common-lisp/source/cffi/grovel/
+	doins grovel/common.h
+}
