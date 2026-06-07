@@ -17,6 +17,7 @@ KEYWORDS="~amd64"
 RDEPEND="
 	dev-lisp/alexandria
 	dev-lisp/asdf
+	dev-lisp/atomics
 	dev-lisp/cffi
 	dev-lisp/cl-colors2
 	dev-lisp/closer-mop
