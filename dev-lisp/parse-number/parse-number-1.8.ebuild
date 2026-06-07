@@ -17,3 +17,9 @@ KEYWORDS="~amd64"
 
 RDEPEND="virtual/commonlisp"
 DEPEND="${RDEPEND}"
+
+src_install() {
+	common-lisp-3_src_install
+	insinto /usr/share/common-lisp/source/parse-number
+	doins version.sexp
+}
