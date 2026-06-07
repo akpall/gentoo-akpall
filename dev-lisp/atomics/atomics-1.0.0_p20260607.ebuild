@@ -14,5 +14,5 @@ LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RDEPEND=""
+RDEPEND="dev-lisp/documentation-utils"
 DEPEND="${RDEPEND}"
