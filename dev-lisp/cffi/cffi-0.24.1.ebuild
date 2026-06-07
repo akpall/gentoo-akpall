@@ -15,6 +15,7 @@ KEYWORDS="~amd64"
 
 RDEPEND="
 	dev-lisp/alexandria
+	dev-lisp/trivial-features
 	virtual/commonlisp
 "
 DEPEND="${RDEPEND}"
