@@ -17,6 +17,7 @@ KEYWORDS="~amd64"
 RDEPEND="
 	dev-lisp/alexandria
 	dev-lisp/asdf
+	dev-lisp/cl-colors2
 	x11-libs/cairo
 	x11-libs/pango
 "
