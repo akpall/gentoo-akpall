@@ -12,7 +12,7 @@ EGIT_REPO_URI="https://github.com/stumpwm/mahogany.git"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64"
 
 RDEPEND="
 	dev-lisp/alexandria
