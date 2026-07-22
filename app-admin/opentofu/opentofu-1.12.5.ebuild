@@ -6,7 +6,10 @@ inherit go-env
 
 DESCRIPTION="The open source infrastructure as code tool"
 HOMEPAGE="https://www.opentofu.org/"
-SRC_URI="https://github.com/opentofu/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="
+	https://github.com/opentofu/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
+	https://github.com/akpall/gentoo-akpall/raw/refs/heads/dev/app-admin/opentofu/files/opentofu-1.12.5-deps.tar.xz
+"
 
 LICENSE="Apache-2.0 BSD BSD-2 MPL-2.0 MIT ISC"
 SLOT="0"
@@ -28,6 +31,7 @@ src_configure() {
 
 src_compile() {
 	go build \
+	   -mod=vendor \
 	   -o bin/tofu \
 	   ./cmd/tofu || die
 }
