@@ -1,0 +1,24 @@
+From a66bed54cb9166504ce55a1c0c76896fccb7f275 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Allen-Kristjan=20P=C3=A4ll?= <akpall@fst.ee>
+Date: Wed, 22 Jul 2026 03:27:10 +0300
+Subject: [PATCH] lower go dependency 1.26.5 -> 1.26.0
+
+---
+ go.mod | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/go.mod b/go.mod
+index ce1393e26f..771fa20a2f 100644
+--- a/go.mod
++++ b/go.mod
+@@ -1,6 +1,6 @@
+ module github.com/opentofu/opentofu
+ 
+-go 1.26.5
++go 1.26.0
+ 
+ // At the time of adding this configuration, the new Go feature introduced here https://github.com/golang/go/issues/67061,
+ // was having a good amount of issues linked to, affecting AWS Firewall, GCP various services and a lot more.
+-- 
+2.55.0
+
