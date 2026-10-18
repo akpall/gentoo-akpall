@@ -21,10 +21,6 @@ RESTRICT="test"
 
 DOCS=( {README,CHANGELOG}.md )
 
-PATCHES=(
-	"${FILESDIR}/opentofu-1.12.5-lower-go-dependency-1.26.5-1.26.0.patch"
-)
-
 src_configure() {
 	go-env_set_compile_environment
 }
