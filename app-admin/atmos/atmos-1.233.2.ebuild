@@ -9,7 +9,7 @@ DESCRIPTION="Terraform Orchestration Tool for DevOps"
 HOMEPAGE="https://github.com/cloudposse/atmos"
 SRC_URI="
 	https://github.com/cloudposse/atmos/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://raw.githubusercontent.com/akpall/gentoo-akpall/refs/heads/master/app-admin/atmos/files/${P}-deps.tar.xz
+	https://github.com/akpall/gentoo-akpall/raw/refs/heads/master/app-admin/atmos/files/${P}-deps.tar.xz
 "
 
 LICENSE="Apache-2.0"
