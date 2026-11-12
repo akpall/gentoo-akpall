@@ -25,16 +25,10 @@ src_configure() {
 	go-env_set_compile_environment
 }
 
-src_unpack() {
-	default
-	mv vendor ${P}
-}
-
 src_compile() {
-	go build \
-	   -mod=vendor \
+	ego build \
 	   -o bin/tofu \
-	   ./cmd/tofu || die
+	   ./cmd/tofu
 }
 
 src_install() {
