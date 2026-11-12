@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-inherit go-env
+inherit go-env go-module
 
 DESCRIPTION="The open source infrastructure as code tool"
 HOMEPAGE="https://www.opentofu.org/"
