@@ -8,7 +8,7 @@ DESCRIPTION="The open source infrastructure as code tool"
 HOMEPAGE="https://www.opentofu.org/"
 SRC_URI="
 	https://github.com/opentofu/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/akpall/gentoo-akpall/raw/refs/heads/master/app-admin/opentofu/files/${P}-deps.tar.xz
+	https://nextcloud.k-space.ee/public.php/dav/files/9sySCrzwAjEfeSH/${P}-deps.tar.xz
 "
 
 LICENSE="Apache-2.0 BSD BSD-2 MPL-2.0 MIT ISC"
